@@ -25,4 +25,4 @@ while (true) {
 
 const sum = evenSum.reduce((a, b) => a + b, 0);
 
-console.log(`The sum of the even numbers in the series less than 4,000,000 is ${  sum}`);
+console.log(`The sum of the even numbers in the series less than 4,000,000 is ${sum}`);
