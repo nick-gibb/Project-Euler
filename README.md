@@ -1,2 +1,2 @@
-# Project-Euler
-I solve all the problems on Project Euler using JavaScript (https://projecteuler.net/)
+# Project-Euler Practice
+To enhance my JavaScript skills, I am aiming to solve all the problems on Project Euler (https://projecteuler.net/). 
