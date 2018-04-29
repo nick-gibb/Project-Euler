@@ -14,7 +14,7 @@ function getChain(num) {
     getChain(next);
   } else {
     // console.log("We're odd");
-    next = 3 * num + 1;
+    next = (3 * num) + 1;
     chain.push(num);
     // console.log(chain);
     getChain(next);
