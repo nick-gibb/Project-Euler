@@ -11,7 +11,24 @@ function gridConstructor(gridSize) {
 const size = 20;
 const grid = gridConstructor(size);
 
-// console.log(grid);
+const ways = [['00']];
+
+function isInGrid(loc) {
+  return grid.indexOf(loc) > -1;
+}
+
+
+function goDown(row, col) {
+  const newRow = Number(row) + 1;
+  const newLoc = `${newRow}${col}`;
+  return newLoc;
+}
+
+function goRight(row, col) {
+  const newCol = Number(col) + 1;
+  const newLoc = `${row}${newCol}`;
+  return newLoc;
+}
 
 function canGoRight(row, col) {
   const right = goRight(row, col);
@@ -29,28 +46,11 @@ function canGoDown(row, col) {
   return false;
 }
 
-function goDown(row, col) {
-  const newRow = Number(row) + 1;
-  const newLoc = `${newRow}${col}`;
-  return newLoc;
-}
-
-function goRight(row, col) {
-  const newCol = Number(col) + 1;
-  const newLoc = `${row}${newCol}`;
-  return newLoc;
-}
-
-function isInGrid(loc) {
-  return grid.indexOf(loc) > -1;
-}
-
-const ways = [['00']];
 
 function improveArray(i) {
-  rowCol = ways[i][ways[i].length - 1];
-  lastRow = rowCol.charAt(0);
-  lastCol = rowCol.charAt(1);
+  const rowCol = ways[i][ways[i].length - 1];
+  const lastRow = rowCol.charAt(0);
+  const lastCol = rowCol.charAt(1);
   if (canGoDown(lastRow, lastCol) && !canGoRight(lastRow, lastCol)) {
     //   console.log('Can go down');
     const newLoc = goDown(lastRow, lastCol);
@@ -88,3 +88,6 @@ for (let i = 0; ;) {
     break;
   }
 }
+
+// console.log(grid);
+
